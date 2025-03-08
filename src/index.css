@@ -1,0 +1,117 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Main Body Styles */
+body {
+    /* background-color: aliceblue; */
+    color: green;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Header Styles */
+.header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ef4444;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+.header:hover {
+    color: #e9eaec;
+}
+
+/* Button Styles */
+.white-button {
+    font-weight: bold;
+    background-color: #04aa6d;
+    color: white;
+    border: 2px solid #04aa6d;
+    border-radius: 8px;
+    transition: border-color 0.4s ease, background-color 0.4s ease, color 0.4s ease;
+    display: flex;  /* Makes children align horizontally */
+    align-items: center; /* Ensures text and input are aligned */
+    gap: 8px; /* Adds spacing between text and input */
+    padding: 6px 12px; /* Adjust padding for better height balance */
+}
+
+.white-button:hover {
+    border-color: white;
+    background-color: white;
+    color: #04aa6d;
+}
+
+/* Visualizer Container Styles */
+.visualizer-container {
+    align-items: center;
+    width: 100%;
+    /* margin-top: 20px; */
+}
+
+/* Visualizer Wrapper Styles */
+.visualizer-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 4rem; /* Add space on top of the container */
+}
+
+/* Slider Styles */
+input[type="range"] {
+    -webkit-appearance: none; /* Remove default styling */
+    appearance: none;
+    width: 150px; /* Adjust width */
+    height: 10px; /* Thickness of the slider */
+    background: white; /* Default bar color */
+    border: 2px solid #04aa6d; /* Green border */
+    border-radius: 4px;
+    outline: none;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+/* Default thumb (draggable circle) */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: white; /* Default thumb */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+/* Firefox-specific thumb styling */
+input[type="range"]::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: #04aa6d; /* Green thumb */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hover effect when cursor is on the entire input bar */
+input[type="range"]:hover {
+    background: #04aa6d; /* Bar turns green when hovered */
+    border-color: white; /* Border turns white */
+}
+
+/* Thumb also changes color when hovering anywhere on the slider */
+input[type="range"]:hover::-webkit-slider-thumb {
+    background: white; /* Thumb turns white */
+    border: 2px solid #04aa6d;
+}
+
+input[type="range"]:hover::-moz-range-thumb {
+    background: white; /* Thumb turns white in Firefox */
+    border: 2px solid #04aa6d;
+}
